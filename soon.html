@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>coming soon page</title>
+        <link href="soon.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="s">
+            <img src="tree.jpg" id="hello" class="hello img2">
+                <div class="main">
+                <h1>COMING SOON</h1>
+                <hr>
+                <p id="launch"></p>
+                
+               
+            
+
+           
+            
+                </div>
+            </div>
+    <script>
+        var deadline = new Date("dec 31, 2020 15:37:25").getTime(); 
+var x = setInterval(function() { 
+var now = new Date().getTime(); 
+var t = deadline - now; 
+var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+document.getElementById("launch").innerHTML = days + "d "  
++ hours + "h " + minutes + "m " + seconds + "s "; 
+    if (t < 0) { 
+        clearInterval(x); 
+        document.getElementById("launch").innerHTML = "EXPIRED"; 
+    } 
+}, 1000); 
+        
+    
+    
+    </script>
+     
+    </body>
+ 
+ </html>
